@@ -152,6 +152,7 @@
             <div class="card-back">
                 <div class="card-body d-flex flex-column justify-content-around">
                     <p class="card-text">A forum where posts can be created, liked and commented on.</p>
+                    <button class="btn btn-secondary active btnStyle" disabled>Demo</button>
                     <a href="https://github.com/cpunt/forum" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
                 </div>
             </div>
@@ -161,14 +162,12 @@
 
       <footer class="footer d-flex text-center justify-content-around text-dark flex-wrap">
         <div class="d-flex align-items-center">
-          <!-- <h5>Links</h5> -->
           <a class="text-dark" href="https://github.com/cpunt" target="_blank">Github</a>
           <a class="ml-4 text-dark" href="https://www.linkedin.com/in/christopher-punt-9a703119a/" target="_blank">LinkedIn</a>
           <a class="ml-4 text-dark" href="https://cpunt.github.io/" target="_blank">My Articles</a>
         </div>
         <div class="d-flex align-items-center">
-          <!-- <h5 class="">Contact info</h5> -->
-          <p class="mr-4 my-0">christopherpunt5@gmail.com</p>
+          <p class="mr-4 my-0">christopherpunt@hotmail.com</p>
         </div>
       </footer>
     </div>
@@ -176,52 +175,65 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        $(".smoothScroll").on("click", function () {
-                $("html, body").animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            });
+      $(".smoothScroll").on("click", function () {
+              $("html, body").animate({
+                  scrollTop: $(this.hash).offset().top
+              }, 1000);
+          });
 
-        function displayDemo (demo) {
-          const backgroundCover = document.getElementById("backgroundCover");
-          const demoId = document.getElementById(demo);
+      function displayDemo (demo) {
+        const backgroundCover = document.getElementById("backgroundCover");
+        const demoId = document.getElementById(demo);
 
-          backgroundCover.style.display = "block";
-          demoId.style.display = "block";
+        backgroundCover.style.display = "block";
+        demoId.style.display = "block";
 
-          document.addEventListener("click", backgroundEvent);
-          document.addEventListener("keydown", escEvent);
+        document.addEventListener("click", backgroundEvent);
+        document.addEventListener("keydown", escEvent);
+      }
+
+      function closeDemo () {
+        const backgroundCover = document.getElementById("backgroundCover");
+        const demo = document.getElementsByClassName("demo");
+
+        backgroundCover.style.display = "none";
+
+        for (let i = 0; i < demo.length; i++) {
+          demo[i].style.display = "none";
         }
 
-        function closeDemo () {
-          const backgroundCover = document.getElementById("backgroundCover");
-          const demo = document.getElementsByClassName("demo");
+        document.removeEventListener("click", backgroundEvent);
+        document.removeEventListener("keydown", escEvent);
+      }
 
-          backgroundCover.style.display = "none";
+      function backgroundEvent (event) {
+        const id = event.target.id;
 
-          for (let i = 0; i < demo.length; i++) {
-            demo[i].style.display = "none";
-          }
-
-          document.removeEventListener("click", backgroundEvent);
-          document.removeEventListener("keydown", escEvent);
+        if (id == "backgroundCover") {
+          closeDemo();
         }
+      }
 
-        function backgroundEvent (event) {
-          const id = event.target.id;
+      function escEvent (event) {
+        const code = event.code;
 
-          if (id == "backgroundCover") {
-            closeDemo();
-          }
+        if (code == "Escape") {
+          closeDemo();
         }
+      }
 
-        function escEvent (event) {
-          const code = event.code;
-
-          if (code == "Escape") {
-            closeDemo();
-          }
-        }
+      // function browserCompatible() {
+      //   let ua = navigator.userAgent.toLowerCase();
+      //   if (ua.indexOf('safari') != -1) {
+      //     if (ua.indexOf('chrome') == -1) {
+      //       return false;
+      //     }
+      //   } else if (ua.indexOf('msie') != -1) {
+      //     return false;
+      //   }
+      //
+      //   return true;
+      // }
     </script>
   </body>
 </html>
