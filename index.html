@@ -9,43 +9,51 @@
   <body>
     <div id="backgroundCover">
       <div class="overlay rounded">
-        <p class="float-right cross" onclick="closeDemo()">&#10005</p>
-        <div id="demo1" class="demo">
-          <div class="d-flex">
-            <video class="video" autoplay muted loop>
-              <source src="assets/annotated-diagrams-video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="text-center d-flex flex-column justify-content-around">
-              <h5>Annotated Diagrams</h5>
-              <p class="card-text">This short demo covers some key features in Annotated Diagrams. There are more features which aren't shown like tags.</p>
-              <button class="btn btn-secondary active btnStyle" disabled>Source Code</button>
+        <div class"d-flex">
+          <p class="float-right cross" onclick="closeDemo()">&#10005</p>
+          <div id="demo1" class="demo">
+            <div class="d-flex">
+              <div>
+                <video class="video" autoplay muted loop>
+                  <source src="assets/annotated-diagrams-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="text-center d-flex flex-column justify-content-around w-25">
+                <h5>Annotated Diagrams</h5>
+                <p class="card-text">This short demo covers some key features in Annotated Diagrams. There are more features which aren't shown like tags.</p>
+                <button class="btn btn-secondary active btnStyle" disabled>Source Code</button>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="demo2" class="demo">
-          <div class="d-flex">
-            <video class="video" autoplay muted loop>
-              <source src="assets/article-drafter-video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="text-center d-flex flex-column justify-content-around">
-              <h5>Article Drafter</h5>
-              <p class="card-text">This short demo covers some key features in the Article Drafter. There are more features which aren't shown like auto-save.</p>
-              <a href="https://github.com/cpunt/article-drafter" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
+          <div id="demo2" class="demo">
+            <div class="d-flex">
+              <div>
+                <video class="video" autoplay muted loop>
+                  <source src="assets/article-drafter-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="text-center d-flex flex-column justify-content-around w-25">
+                <h5>Article Drafter</h5>
+                <p class="card-text">This short demo covers some key features in the Article Drafter. There are more features which aren't shown like auto-save.</p>
+                <a href="https://github.com/cpunt/article-drafter" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="demo3" class="demo">
-          <div class="d-flex">
-            <video class="video" autoplay muted loop>
-              <source src="assets/task-organizer-video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-            <div class="text-center d-flex flex-column justify-content-around">
-              <h5>Task Organizer</h5>
-              <p class="card-text">This short demo shows some key features in the Task Organizer. There are more features which aren't shown like displaying set tasks and dates.</p>
-              <a href="https://github.com/cpunt/task-organizer" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
+          <div id="demo3" class="demo">
+            <div class="d-flex">
+              <div>
+                <video class="video" autoplay muted loop>
+                  <source src="assets/task-organizer-video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div class="text-center d-flex flex-column justify-content-around w-25">
+                <h5>Task Organizer</h5>
+                <p class="card-text">This short demo shows some key features in the Task Organizer. There are more features which aren't shown like displaying set tasks and dates.</p>
+                <a href="https://github.com/cpunt/task-organizer" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
+              </div>
             </div>
           </div>
         </div>
@@ -70,8 +78,8 @@
         <h1 class="header mb-3">My Projects</h1>
 
         <div class="d-flex justify-content-center flex-wrap">
-          <div class="card shadow projectCard card-flip text-dark">
-            <div class="card-front">
+          <div class="card shadow projectCard card-flip">
+            <div class="card-front text-dark bg-white">
               <div class="card-body">
                   <h3 class="card-title">Annotated Diagrams</h3>
                   <ul class="list-group list-group-flush list-group-mine">
@@ -83,8 +91,8 @@
                   </ul>
               </div>
             </div>
-            <div class="card-back">
-              <div class="card-body d-flex flex-column justify-content-around text-dark">
+            <div class="card-back text-dark bg-white">
+              <div class="card-body d-flex flex-column justify-content-around">
                   <p class="card-text">A Google internal project which makes static graphs dynamic. This is a joint project which is not currently open sourced.</p>
                   <button class="btn btn-secondary active btnStyle" onclick="displayDemo('demo1')">Demo</button>
                   <button class="btn btn-secondary active btnStyle" disabled>Source Code</button>
@@ -92,8 +100,8 @@
             </div>
           </div>
 
-          <div class="card shadow projectCard card-flip text-dark">
-            <div class="card-front">
+          <div class="card shadow projectCard card-flip">
+            <div class="card-front text-dark bg-white">
               <div class="card-body">
                   <h3 class="card-title ">Article Drafter</h3>
                   <ul class="list-group list-group-flush list-group-mine">
@@ -105,7 +113,7 @@
                   </ul>
               </div>
             </div>
-            <div class="card-back bg-white">
+            <div class="card-back text-dark bg-white">
               <div class="card-body d-flex flex-column justify-content-around">
                   <p class="card-text">A article drafter that also has the ability to display and sort articles with the use of tags.</p>
                   <button class="btn btn-secondary active btnStyle" onclick="displayDemo('demo2')">Demo</button>
@@ -114,8 +122,8 @@
             </div>
           </div>
 
-          <div class="card shadow projectCard card-flip text-dark">
-            <div class="card-front">
+          <div class="card shadow projectCard card-flip">
+            <div class="card-front text-dark bg-white">
               <div class="card-body">
                   <h3 class="card-title">Task Organizer</h3>
                   <ul class="list-group list-group-flush list-group-mine">
@@ -127,7 +135,7 @@
                   </ul>
               </div>
             </div>
-            <div class="card-back">
+            <div class="card-back text-dark bg-white">
                 <div class="card-body d-flex flex-column justify-content-around">
                     <p class="card-text">A task organizer which utilizes a tree like structure to order tasks and subtasks.</p>
                     <button class="btn btn-secondary active btnStyle" onclick="displayDemo('demo3')">Demo</button>
@@ -136,8 +144,8 @@
             </div>
           </div>
 
-          <div class="card shadow projectCard card-flip text-dark">
-            <div class="card-front">
+          <div class="card shadow projectCard card-flip">
+            <div class="card-front text-dark bg-white">
               <div class="card-body">
                   <h3 class="card-title">Forum</h3>
                   <ul class="list-group list-group-flush list-group-mine">
@@ -149,7 +157,7 @@
                   </ul>
               </div>
             </div>
-            <div class="card-back">
+            <div class="card-back text-dark bg-white">
                 <div class="card-body d-flex flex-column justify-content-around">
                     <p class="card-text">A forum where posts can be created, liked and commented on.</p>
                     <button class="btn btn-secondary active btnStyle" disabled>Demo</button>
