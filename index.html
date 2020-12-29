@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -10,16 +11,17 @@
     <div id="backgroundCover">
       <div class="overlay rounded">
         <div class"d-flex">
-          <p class="float-right cross" onclick="closeDemo()">&#10005</p>
+          <!-- &#10005 -->
+          <p class="float-right cross" onclick="closeDemo()"></p>
           <div id="demo1" class="demo">
             <div class="d-flex">
               <div>
-                <video class="video" autoplay muted loop>
+                <video class="video" autoplay muted loop playsinline controls disablePictureInPicture controlsList="nodownload">
                   <source src="assets/annotated-diagrams-video.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div class="text-center d-flex flex-column justify-content-around w-25">
+              <div class="text-center d-flex flex-column justify-content-around w-25 screenView">
                 <h5>Annotated Diagrams</h5>
                 <p class="card-text">This short demo covers some key features in Annotated Diagrams. There are more features which aren't shown like tags.</p>
                 <button class="btn btn-secondary active btnStyle" disabled>Source Code</button>
@@ -29,12 +31,12 @@
           <div id="demo2" class="demo">
             <div class="d-flex">
               <div>
-                <video class="video" autoplay muted loop>
+                <video class="video" autoplay muted loop playsinline controls disablePictureInPicture controlsList="nodownload">
                   <source src="assets/article-drafter-video.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div class="text-center d-flex flex-column justify-content-around w-25">
+              <div class="text-center d-flex flex-column justify-content-around w-25 screenView">
                 <h5>Article Drafter</h5>
                 <p class="card-text">This short demo covers some key features in the Article Drafter. There are more features which aren't shown like auto-save.</p>
                 <a href="https://github.com/cpunt/article-drafter" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
@@ -44,12 +46,12 @@
           <div id="demo3" class="demo">
             <div class="d-flex">
               <div>
-                <video class="video" autoplay muted loop>
+                <video class="video" autoplay muted loop playsinline controls disablePictureInPicture controlsList="nodownload">
                   <source src="assets/task-organizer-video.mp4" type="video/mp4">
                   Your browser does not support the video tag.
                 </video>
               </div>
-              <div class="text-center d-flex flex-column justify-content-around w-25">
+              <div class="text-center d-flex flex-column justify-content-around w-25 screenView">
                 <h5>Task Organizer</h5>
                 <p class="card-text">This short demo shows some key features in the Task Organizer. There are more features which aren't shown like displaying set tasks and dates.</p>
                 <a href="https://github.com/cpunt/task-organizer" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
@@ -91,8 +93,9 @@
                   </ul>
               </div>
             </div>
-            <div class="card-back text-dark bg-white">
-              <div class="card-body d-flex flex-column justify-content-around">
+            <div class="card-back text-dark bg-white h-100">
+              <div class="card-body d-flex flex-column justify-content-around h-100">
+                  <h3 class="card-title phoneView">Annotated Diagrams</h3>
                   <p class="card-text">A Google internal project which makes static graphs dynamic. This is a joint project which is not currently open sourced.</p>
                   <button class="btn btn-secondary active btnStyle" onclick="displayDemo('demo1')">Demo</button>
                   <button class="btn btn-secondary active btnStyle" disabled>Source Code</button>
@@ -113,8 +116,9 @@
                   </ul>
               </div>
             </div>
-            <div class="card-back text-dark bg-white">
-              <div class="card-body d-flex flex-column justify-content-around">
+            <div class="card-back text-dark bg-white h-100">
+              <div class="card-body d-flex flex-column justify-content-around h-100">
+                  <h3 class="card-title phoneView">Article Drafter</h3>
                   <p class="card-text">A article drafter that also has the ability to display and sort articles with the use of tags.</p>
                   <button class="btn btn-secondary active btnStyle" onclick="displayDemo('demo2')">Demo</button>
                   <a href="https://github.com/cpunt/article-drafter" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
@@ -135,8 +139,9 @@
                   </ul>
               </div>
             </div>
-            <div class="card-back text-dark bg-white">
-                <div class="card-body d-flex flex-column justify-content-around">
+            <div class="card-back text-dark bg-white h-100">
+                <div class="card-body d-flex flex-column justify-content-around h-100">
+                    <h3 class="card-title phoneView">Task Organizer</h3>
                     <p class="card-text">A task organizer which utilizes a tree like structure to order tasks and subtasks.</p>
                     <button class="btn btn-secondary active btnStyle" onclick="displayDemo('demo3')">Demo</button>
                     <a href="https://github.com/cpunt/task-organizer" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
@@ -157,8 +162,9 @@
                   </ul>
               </div>
             </div>
-            <div class="card-back text-dark bg-white">
-                <div class="card-body d-flex flex-column justify-content-around">
+            <div class="card-back text-dark bg-white h-100">
+                <div class="card-body d-flex flex-column justify-content-around h-100">
+                    <h3 class="card-title phoneView">Forum</h3>
                     <p class="card-text">A forum where posts can be created, liked and commented on.</p>
                     <button class="btn btn-secondary active btnStyle" disabled>Demo</button>
                     <a href="https://github.com/cpunt/forum" target="_blank" class="btn btn-secondary active btnStyle">Source Code</a>
