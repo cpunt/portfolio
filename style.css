@@ -68,6 +68,13 @@ body {
   width: 100%;
 }
 
+.overlay {
+  position: fixed;
+  top: 45%;
+  left: 20%;
+  transform: translate(-13%, -50%);
+}
+
 #backgroundCover {
   display: none;
   top: 0;
@@ -80,7 +87,7 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 481px) {
+@media (any-pointer: fine) {
   .card-flip > div {
     backface-visibility: hidden;
     transition: transform 300ms;
@@ -115,17 +122,11 @@ body {
 
   .overlay {
     background-color: #ffffff;
-    position: absolute;
-    padding: 10px;
-    z-index: 15;
-    width: 80%;
-    left: 10%;
-    top: 10%;
   }
 }
 
 
-@media (max-width: 480px) {
+@media (pointer: coarse) {
   .card-front {
     display: none;
   }
@@ -136,13 +137,5 @@ body {
 
   .header-main {
     font-size: 3rem;
-  }
-
-  .overlay {
-    position: absolute;
-    z-index: 15;
-    width: 95%;
-    top: 20%;
-    left: 2.5%;
   }
 }
