@@ -51,9 +51,9 @@ body {
 }
 
 .footer {
-  border-top: 2px white solid;
   padding: 2rem 0;
   font-size: 1.1rem;
+  background-color: #F8F8FF;
 }
 
 .demo {
